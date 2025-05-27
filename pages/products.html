@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Christian Wijaya</title>
+    
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/products.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <h1 class="logo-main">Christian Wijaya</h1>
+            </a>
+            
+            <nav class="nav">
+                <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link-item">Home</a></li>
+                    <li><a href="products.html" class="nav-link-item">Products</a></li>
+                    <li><a href="events.html" class="nav-link-item">Events</a></li>
+                    <li><a href="about.html" class="nav-link-item">About Us</a></li>
+                    <li>
+                        <button class="cart-btn-icon" aria-label="Shopping cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-area" class="container">
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-icon-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                    </svg>
+                </div>
+                <input type="text" class="search-input" placeholder="Search products..." aria-label="Search products">
+            </div>
+        </section>
+        
+        <section class="trailer-video-section">
+            <div class="video-player-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZ6fvUQ6L1d8YAUP18GOJK78qMB_hNTLUVJpDFLO8FqeOjKY38oTN7DEM2Zf9TYQry__c6GHWaKmUpfviuq2qnWogrtN0komFTUQZplPHf0-UqCC9BeovdsSuRDmx5OWZvlqeG8PXU85IzDUPhPI-CZxUrHy38c2PlJwdE7p6otursgvzeDvmys2nEjBOce3q64U6wS2uUS5BXLfoEdhUaGVfgtsnZ_marVfoo-Q5CpBu3LWO6GylzE7MfUq5e5WGj1QnooW9IG5fA')">
+                <button class="play-video-btn" aria-label="Play fashion trailer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        
+        <section class="collection-main-title">
+            <h2>Christian Wijaya Fashion Collection</h2>
+        </section>
+        
+        <section class="filter-buttons">
+            <button class="btn" data-filter="category" data-value="all">
+                All Products
+            </button>
+            <button class="btn" data-filter="category" data-value="dresses">
+                Dresses
+            </button>
+            <button class="btn" data-filter="category" data-value="tops">
+                Tops
+            </button>
+            <button class="btn" data-filter="category" data-value="bottoms">
+                Bottoms
+            </button>
+            <button class="btn" data-filter="category" data-value="accessories">
+                Accessories
+            </button>
+        </section>
+        
+        <section class="product-grid-section">
+            <div class="product-item-grid">
+                <div class="product-box" data-product-id="1" data-category="dresses" data-price="2500000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkDeWZuHtx99Ys2yobcBpP8Svi1J4TWXXS-mI9FZzIwv3FDFXjWGugmvLeEG894baZ1Fu5hVDmnGwzzVfb4qqWJnIB9lnxjOs98FE52ItFeXKTjSki4K7fwM2jW-xeF7hzyjeH2brCrBhwfbczGfrPbOnaiMWqoQoWoBPT7DoFKoZImC8n1Pbz4NPFtTkZjZBY50GE0IzQEzVbsq4Aq7j9r4_lI_EZ22HWJaJjE-X7BKgT9jUb00Rsvi7kqqHKA98WgvlTypIdLW0F')">
+                        <div class="product-tag new">New</div>
+                    </div>
+                    <div class="product-box-info">
+                        <div class="product-box-content">
+                            <h3 class="product-box-name">Elegant Summer Dress</h3>
+                            <p class="product-box-desc">A flowing summer dress perfect for elegant occasions</p>
+                            <div class="product-box-price">
+                                <span class="price-now">Rp 2,500,000</span>
+                            </div>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="2" data-category="tops" data-price="1800000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-hTNba_S7dg45QFTKyE2r7TS9BV6LXH8WyB_KiiQwrKE0kjsjOb-Nip2WQSS7t8M9eAn3YGssVlwLDCwF45IiElFjfPpPPpgw25iwvRn9pSLzk56AVAjxDIGjCpOorJQF2xPBcnK6Df28ED60tmYtHYkAT6AD2DV3uJsRVWiqjsM6tjb2vwwXaHrzzfkjXauXkqq9KGiFg4BmZiM8qFCt34lraK4Va52DuZiSQnpVSZHv-5vlcQPSYgUe6WNYY7KN3cc_jNNH_7l2')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Silk Blouse</h3>
+                        <p class="product-box-desc">Luxurious silk blouse for professional elegance</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 1,800,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="3" data-category="bottoms" data-price="2200000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvkd1AxOqPBq07fI5-WUNA7-Tvp1jrvg4atmgA1vdMQQHnxdPV_iSajoo1a-1AzyPqaXj0NUDhpqCgthzgNofyX9l_HQD7GKsKONNNrmXHgQuoEilXERjjUsAUqJ-AYzyg8aZ2Ks45mjQ7yOKlZfC5TZAYlyf-g7G2qfOoslKymKZPMeAC6V4qMO1yDHtMdp-MTBo90hwH0sGOVAc7Lq9ytb7viysOGMavbVKYW8t-8r9hhVaLwTQsoHBhh-vMYClPHieTvNpXmnW0')">
+                    </div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Tailored Trousers</h3>
+                        <p class="product-box-desc">Perfectly tailored trousers for modern sophistication</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 2,200,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="4" data-category="accessories" data-price="1200000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBYT_xw3id9UeDGpzlyhBUpeso9v-HWtc85g4vkcBlS3QH3Vq_3Dyp7FTIl7ScGsMzUYfOABAJVW80Pk5lKMymzf6aeiEAQHuGgFELRggohifKauPztca8qf47B6xK4GWxIKL7GRNHIwr323R_zblYDBScoa25rCszevaG91cb8_REDt96_V4f5Zvb8jzmVsvtVMMy9TvYWtl_wiOE0bWP9JpkTR2SIqwFrJWbL3GnT_6AnktLJU7tNjk039npz26zdKXgi3IQn4-n')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Leather Handbag</h3>
+                        <p class="product-box-desc">Premium leather handbag with timeless design</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 1,200,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="5" data-category="dresses" data-price="3200000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFv2XSZh9wrshs0kq_KNduehKe0xxELOtK5MB5uKgQz9PxE1D6QizFeLQc5aPoD4bJUnkQzD9Tgy8NN9j6RldfmmbD4-oX32Fp-VyfGKYZTBAO0awar8bihSmf_31H05L_w1ih8k_S4ngpVbfXFGrkYZ0i05n8T2TGUBaD4CLzX9Qy_96MnIlP72MLLh3r7ShY3CPbhP4eiZsSQP20m3xV2Bywb19irSZQJDby6cTfW9NZ1Uaubr7f5MFdnUnZLi0vM9TZvU6WYNvU')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Evening Gown</h3>
+                        <p class="product-box-desc">Stunning evening gown for special occasions</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 3,200,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="6" data-category="tops" data-price="1500000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIGYrQ5aAD5VKAXjuUOMoATgAKVrrQ3vdzI5EeXy1AaTvvS7OEwmqJQbrpG5-Q__NSE1v8Z2RZ598-I3zofIuLaN-7qoEa4KpunUfuCwLVii2lKRuO4hG9PYH595FTkYxIa7HiI6qGiDghYQkxEIwL-0qJj4Jez_n5Ko99JvSK1L8UmsgsB0s9C975e1lBSWiffU1ogRZBCYNq-slgtPTZNTQmPA1wzrCaInqB8ijgBBbOcs9AqAnyiJruhq98Vuf3QC505w4fPtHa')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Cashmere Sweater</h3>
+                        <p class="product-box-desc">Soft cashmere sweater for ultimate comfort</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 1,500,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="7" data-category="accessories" data-price="800000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZ6fvUQ6L1d8YAUP18GOJK78qMB_hNTLUVJpDFLO8FqeOjKY38oTN7DEM2Zf9TYQry__c6GHWaKmUpfviuq2qnWogrtN0komFTUQZplPHf0-UqCC9BeovdsSuRDmx5OWZvlqeG8PXU85IzDUPhPI-CZxUrHy38c2PlJwdE7p6otursgvzeDvmys2nEjBOce3q64U6wS2uUS5BXLfoEdhUaGVfgtsnZ_marVfoo-Q5CpBu3LWO6GylzE7MfUq5e5WGj1QnooW9IG5fA')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Silk Scarf</h3>
+                        <p class="product-box-desc">Elegant silk scarf with unique pattern</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 800,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="8" data-category="bottoms" data-price="1900000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkDeWZuHtx99Ys2yobcBpP8Svi1J4TWXXS-mI9FZzIwv3FDFXjWGugmvLeEG894baZ1Fu5hVDmnGwzzVfb4qqWJnIB9lnxjOs98FE52ItFeXKTjSki4K7fwM2jW-xeF7hzyjeH2brCrBhwfbczGfrPbOnaiMWqoQoWoBPT7DoFKoZImC8n1Pbz4NPFtTkZjZBY50GE0IzQEzVbsq4Aq7j9r4_lI_EZ22HWJaJjE-X7BKgT9jUb00Rsvi7kqqHKA98WgvlTypIdLW0F')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Designer Skirt</h3>
+                        <p class="product-box-desc">Chic designer skirt for versatile styling</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 1,900,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="9" data-category="dresses" data-price="2800000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-hTNba_S7dg45QFTKyE2r7TS9BV6LXH8WyB_KiiQwrKE0kjsjOb-Nip2WQSS7t8M9eAn3YGssVlwLDCwF45IiElFjfPpPPpgw25iwvRn9pSLzk56AVAjxDIGjCpOorJQF2xPBcnK6Df28ED60tmYtHYkAT6AD2DV3uJsRVWiqjsM6tjb2vwwXaHrzzfkjXauXkqq9KGiFg4BmZiM8qFCt34lraK4Va52DuZiSQnpVSZHv-5vlcQPSYgUe6WNYY7KN3cc_jNNH_7l2')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Cocktail Dress</h3>
+                        <p class="product-box-desc">Sophisticated cocktail dress for evening events</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 2,800,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-box" data-product-id="10" data-category="accessories" data-price="950000">
+                    <div class="product-box-img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvkd1AxOqPBq07fI5-WUNA7-Tvp1jrvg4atmgA1vdMQQHnxdPV_iSajoo1a-1AzyPqaXj0NUDhpqCgthzgNofyX9l_HQD7GKsKONNNrmXHgQuoEilXERjjUsAUqJ-AYzyg8aZ2Ks45mjQ7yOKlZfC5TZAYlyf-g7G2qfOoslKymKZPMeAC6V4qMO1yDHtMdp-MTBo90hwH0sGOVAc7Lq9ytb7viysOGMavbVKYW8t-8r9hhVaLwTQsoHBhh-vMYClPHieTvNpXmnW0')"></div>
+                    <div class="product-box-info">
+                        <h3 class="product-box-name">Statement Jewelry</h3>
+                        <p class="product-box-desc">Bold statement jewelry to complete your look</p>
+                        <div class="product-box-price">
+                            <span class="price-now">Rp 950,000</span>
+                        </div>
+                        <div class="product-box-actions">
+                            <button class="btn">Quick Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="#" class="footer-nav-item">Contact Us</a>
+                <a href="#" class="footer-nav-item">Customer Service</a>
+                <a href="#" class="footer-nav-item">Privacy Policy</a>
+                <a href="#" class="footer-nav-item">Terms of Use</a>
+            </div>
+            
+            <div class="footer-social-icons">
+                <a href="#" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path>
+                     </svg>
+                 </a>
+                 <a href="#" aria-label="Instagram">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                         <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+                     </svg>
+                 </a>
+                 <a href="#" aria-label="Facebook">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                         <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+                     </svg>
+                 </a>
+             </div>
+             
+             <p class="footer-copytext">© 2024 Christian Wijaya. All rights reserved.</p>
+         </div>
+     </footer>
+     
+     <script src="../js/main.js"></script>
+     <script src="../js/product-interactions.js"></script>
+ </body>
+ </html>
