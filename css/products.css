@@ -207,13 +207,13 @@
     gap: 0.5rem;
     margin-top: auto;
     align-items: flex-end;
-    margin-bottom: 2rem; /* Added margin here */
+    margin-bottom: 2rem; 
 }
 
 .product-box-actions .btn {
     border-radius: 0;
-    min-height: 45px; /* Reduced button size */
-    padding: 0.8rem 1.5rem; /* Reduced button size */
+    min-height: 45px; 
+    padding: 0.8rem 1.5rem; 
 }
 
 .wishlist-btn-icon {
@@ -315,7 +315,7 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all var(--speed) ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
@@ -329,11 +329,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.size-option-buttons .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .size-option-buttons .btn.active {
@@ -373,6 +368,8 @@
 
 .product-action-buttons {
     gap: 1rem;
+    margin-top: 4rem; /* Further increased margin above action buttons */
+    margin-bottom: 3rem; /* Added margin below action buttons */
 }
 
 .product-action-buttons .btn {
@@ -391,56 +388,11 @@
     box-shadow: 0 8px 25px rgba(26, 26, 26, 0.3);
 }
 
-.product-action-buttons .add-to-cart-btn-primary:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-    z-index: -1;
-}
-
-.product-action-buttons .add-to-cart-btn-primary:hover:before {
-    left: 100%;
-}
-
-.product-action-buttons .add-to-cart-btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(26, 26, 26, 0.4);
-}
-
 .product-action-buttons .order-now-btn-secondary {
     background: linear-gradient(135deg, var(--color-accent) 0%, #d4d9df 100%);
     border: 2px solid var(--color-accent);
     color: var(--color-dark);
     box-shadow: 0 8px 25px rgba(192, 200, 208, 0.4);
-}
-
-.product-action-buttons .order-now-btn-secondary:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-    transition: all 0.4s ease;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-
-.product-action-buttons .order-now-btn-secondary:hover:after {
-    width: 300px;
-    height: 300px;
-}
-
-.product-action-buttons .order-now-btn-secondary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(192, 200, 208, 0.5);
 }
 
 .breadcrumb {

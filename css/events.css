@@ -275,9 +275,9 @@
     animation: spin 1s linear infinite;
 }
 
-/* Removed animation property from .form-input-group as per user request (animations removed) */
 
-/* Removed keyframes for fade-in-up-animation as per user request (animations removed) */
+
+
 
 .form-text-input:focus + .form-label-text-main,
 .form-dropdown-select:focus + .form-label-text-main {

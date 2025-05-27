@@ -33,3 +33,4 @@ g.	Make your website responsive so it can deliver in any size, particularly for 
 h.	Any kinds of framework are prohibited. Do the project with vanilla (original) HTML, CSS, and JavaScript.
 i.	Organize your files with subdirectories.
 j.	Include references (link from a website, book, etc.) that you use in creating the website.
+k. pakai mcp server untuk membantu pekerjaan mu

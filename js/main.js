@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     setupMobileMenu();
-    makeScrollSmooth();
-    loadImagesSlowly();
     addClickyThings();
     
     console.log('Website is ready.');
@@ -16,7 +14,7 @@ function setupMobileMenu() {
             navItems.classList.toggle('active');
             var menuIsOpen = navItems.classList.contains('active');
             menuToggle.setAttribute('aria-expanded', menuIsOpen);
-            // mobile-anim-slide class removed as per user request (animations removed)
+            
         });
         
         document.addEventListener('click', function(event) {
@@ -35,36 +33,6 @@ function setupMobileMenu() {
         });
     }
 }
-
-function makeScrollSmooth() {
-    var allLinks = document.querySelectorAll('a[href^="#"]');
-    
-    allLinks.forEach(function(link) {
-        link.addEventListener('click', function(eventData) {
-            var linkTargetId = this.getAttribute('href');
-            var targetDiv = document.querySelector(linkTargetId);
-            
-            if (targetDiv) {
-                eventData.preventDefault();
-                targetDiv.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-}
-
-function loadImagesSlowly() {
-    var pageImages = document.querySelectorAll('img[data-src]');
-    
-    pageImages.forEach(function(theImage) {
-        theImage.src = theImage.dataset.src;
-        theImage.classList.remove('lazy');
-    });
-}
-
-// startPageAnimations function removed as per user request (animations removed)
 
 function addClickyThings() {
     var clickyElements = document.querySelectorAll('.card, .btn, .nav-link-item');
@@ -85,14 +53,6 @@ function addClickyThings() {
 }
 
 var MyHelpers = {
-    makeMoneyLookNice: function(moneyAmount) {
-        return new Intl.NumberFormat('id-ID', {
-            style: 'currency',
-            currency: 'IDR',
-            minimumFractionDigits: 0
-        }).format(moneyAmount);
-    },
-    
     checkEmailSimple: function(emailAddress) {
         var atSignPos = emailAddress.indexOf('@');
         var dotPos = emailAddress.lastIndexOf('.');
@@ -107,7 +67,5 @@ var MyHelpers = {
 window.MyWebsiteStuff = {
     Helpers: MyHelpers,
     setupMobileMenu: setupMobileMenu,
-    makeScrollSmooth: makeScrollSmooth,
-    loadImagesSlowly: loadImagesSlowly,
     addClickyThings: addClickyThings
 };
