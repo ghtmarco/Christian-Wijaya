@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     setupMobileMenu();
     addClickyThings();
-    
-    console.log('Website is ready.');
 });
 
 function setupMobileMenu() {

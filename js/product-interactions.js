@@ -1,6 +1,129 @@
 document.addEventListener('DOMContentLoaded', function() {
-    setupProductsPage();
+    
+    if (document.querySelector('.product-detail-page')) {
+        if (typeof productData !== 'undefined') {
+            populateProductDetails();
+        } else {
+            console.error('Product data is not loaded.');
+            
+            const productPageElement = document.querySelector('.product-detail-page');
+            if (productPageElement) {
+                productPageElement.innerHTML = '<p style="text-align:center; margin-top: 2rem;">Error: Product data could not be loaded.</p>';
+            }
+        }
+    } else if (document.querySelector('.product-item-grid')) { 
+        setupProductsPage();
+    }
+    
+    if (typeof updateCartNumber === "function") { 
+        updateCartNumber();
+    }
 });
+
+function populateProductDetails() {
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('id');
+    const productPageElement = document.querySelector('.product-detail-page');
+
+    if (!productId || !window.productData) {
+        if (productPageElement) {
+            productPageElement.innerHTML = '<p style="text-align:center; margin-top: 2rem;">Product ID not provided or data not loaded.</p>';
+        }
+        return;
+    }
+
+    const product = window.productData.find(p => p.id === productId);
+
+    if (!product) {
+        if (productPageElement) {
+            productPageElement.innerHTML = '<p style="text-align:center; margin-top: 2rem;">Product not found.</p>';
+        }
+        return;
+    }
+
+    document.title = product.name + " - Christian Wijaya";
+
+    const breadcrumbCurrent = document.querySelector('.page-path .current-page');
+    if (breadcrumbCurrent) breadcrumbCurrent.textContent = product.name;
+
+    const mainImageElement = document.querySelector('.gallery-main-img');
+    if (mainImageElement) mainImageElement.style.backgroundImage = 'url(' + product.imageSrc + ')';
+    
+    const titleElement = document.querySelector('.product-details-title');
+    if (titleElement) titleElement.textContent = product.name;
+
+    const descElement = document.querySelector('.product-details-desc');
+    if (descElement) descElement.textContent = product.descriptionLong;
+
+    const priceElement = document.querySelector('.price-now.base-cost');
+    if (priceElement) {
+        priceElement.textContent = 'Rp ' + product.price.toLocaleString('id-ID');
+        priceElement.dataset.price = product.price;
+    }
+    
+    const totalCostDisplaySpan = document.querySelector('.total-cost-display span');
+    if (totalCostDisplaySpan && priceElement) { 
+         totalCostDisplaySpan.textContent = 'Rp ' + product.price.toLocaleString('id-ID'); 
+    }
+
+
+    const sizeButtonsContainer = document.querySelector('.size-option-buttons');
+    if (sizeButtonsContainer) {
+        sizeButtonsContainer.innerHTML = '';
+        product.availableSizes.forEach((size, index) => {
+            const button = document.createElement('button');
+            button.className = 'btn size-option-btn';
+            if (index === 0) { 
+                 button.classList.add('active');
+            }
+            button.dataset.size = size;
+            button.textContent = size;
+            sizeButtonsContainer.appendChild(button);
+        });
+    }
+    const selectedSizeInput = document.querySelector('input[name="selectedSize"]');
+    if (selectedSizeInput && product.availableSizes.length > 0) {
+        selectedSizeInput.value = product.availableSizes[0];
+    }
+
+
+    const detailsGrid = document.querySelector('.detail-info-grid');
+    if (detailsGrid) {
+        detailsGrid.innerHTML = `
+            <div class="detail-info-row">
+                <span class="detail-info-label">Material</span>
+                <span class="detail-info-value">${product.details.material || 'N/A'}</span>
+            </div>
+            <div class="detail-info-row">
+                <span class="detail-info-label">Care</span>
+                <span class="detail-info-value">${product.details.care || 'N/A'}</span>
+            </div>
+            <div class="detail-info-row">
+                <span class="detail-info-label">Fit</span>
+                <span class="detail-info-value">${product.details.fit || 'N/A'}</span>
+            </div>
+            <div class="detail-info-row">
+                <span class="detail-info-label">Origin</span>
+                <span class="detail-info-value">${product.details.origin || 'N/A'}</span>
+            </div>
+            <div class="detail-info-row">
+                <span class="detail-info-label">SKU</span>
+                <span class="detail-info-value">${product.details.sku || 'N/A'}</span>
+            </div>
+        `;
+    }
+    
+    if (productPageElement) {
+        productPageElement.dataset.productId = product.id;
+    }
+
+    
+    if (typeof setupSizes === "function") setupSizes();
+    if (typeof setupCartButtons === "function") setupCartButtons();
+    
+    
+    
+}
 
 function setupProductsPage() {
     doProductSearch();
